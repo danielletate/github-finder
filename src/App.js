@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AlertProvider } from "./context/alert/AlertContext";
 import { GithubProvider } from "./context/github/GithubContext";
 import About from "./pages/About";
+import Alert from "./components/layout/Alert";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import Navbar from "./components/layout/Navbar";
@@ -16,6 +17,7 @@ function App() {
             <Navbar />
 
             <main className="container mx-auto px-3 pb-12">
+            <Alert />
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
